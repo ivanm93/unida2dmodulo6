@@ -1,0 +1,15 @@
+<form action="/admin/login" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">usuario</label>
+    <input type="text" class="form-control" id="inputuser" name="usuario">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPasword" name="password">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">iniciar</button>
+</form>
+{{#if error}}
+<p id="mensaje">Usuario o contraseña incorrecto</p>
+{{/if}}

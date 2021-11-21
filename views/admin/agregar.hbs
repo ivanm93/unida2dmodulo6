@@ -1,0 +1,18 @@
+<h2>Agregar nueva novedad</h2>
+
+<form action="/admin/novedades/agregar" method="post">
+  <div class="mb-3">
+    <label for="titulo" class="form-label">Titulo</label>
+    <input type="text" class="form-control" id="inputuser" name="titulo">
+  </div>
+  <div class="mb-3">
+    <label for="subtitulo" class="form-label">Subtitulo</label>
+    <textarea type="text" class="form-control" id="inputuser" name="subtitulo"></textarea>
+  </div>
+    <div class="mb-3">
+    <label for="cuerpo" class="form-label">Contenido</label>
+    <textarea type="text" class="form-control" id="inputuser" name="cuerpo"></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

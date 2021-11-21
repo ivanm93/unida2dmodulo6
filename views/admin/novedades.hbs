@@ -1,0 +1,51 @@
+<div class="container" style="margin: 50px auto">
+   
+    <div class="row">
+        <div class="col">
+        <p class="text-end">Hola {{usuario}} <a class="btn btn-danger" href="/admin/login/logout">Cerrar sesión
+<i class="fa fa-sign-out" aria-hidden="true"></i>
+</a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-7">
+             <h3>Lista de Novedades</h3>
+        </div>
+        
+        <div class="col-5 text-end">
+            <a class="btn btn-success" href="/admin/novedades/agregar">
+                <i class="fa fa-plus" aria-hidden="true"></i> Nuevo</a>
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col" class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+    {{#each novedades}}
+    <tr>
+        <th scope="row">{{id}}</th>
+        <td>{{titulo}}</td>
+        <td class="text-center">
+        <a href="/admin/novedades/modificar/{{id}}" title="Editar" class="btn btn-sm btn-secondary">
+<i class="fa fa-pencil" aria-hidden="true"></i>
+        </a>
+        <a href="/admin/novedades/eliminar/{{id}}" title="Eliminar" class="btn btn-sm btn-secondary">
+<i class="fa fa-trash" aria-hidden="true"></i>
+        </a>
+        </td>
+    </tr>
+    {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
